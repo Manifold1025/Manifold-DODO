@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DODOAR 測試版本</title>
-    <script type="module">
-      import '@google/model-viewer';
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DODOAR 測試版</title>
+  <script type="module" src="https://www.dropbox.com/scl/fi/uors21mggm6w490vgwgsl/DODO.usdz?rlkey=w3qr8hxez1u2wydwz7wysp6ul&st=6dzwz4x0&raw=1"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      max-height: 600px;
+    }
+  </style>
 </head>
 <body>
-    <h1>點擊下方查看 AR 模型</h1>
 
-    <model-viewer 
-        src="https://www.dropbox.com/scl/fi/uors21mggm6w490vgwgsl/DODO.usdz?rlkey=w3qr8hxez1u2wydwz7wysp6ul&st=6dzwz4x0&raw=1" 
-        alt="3D model" 
-        auto-rotate 
-        camera-controls 
-        ar
-        style="width: 100%; height: 500px;">
-    </model-viewer>
+  <h1 style="text-align:center;">View 3D Model in AR</h1>
+
+  <model-viewer 
+    src="https://www.dropbox.com/scl/fi/uors21mggm6w490vgwgsl/DODO.usdz?rlkey=w3qr8hxez1u2wydwz7wysp6ul&st=6dzwz4x0&raw=1" 
+    alt="A 3D model of something"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    auto-rotate
+    camera-controls
+    style="width: 100%; height: 100%; max-width: 600px; max-height: 600px;">
+  </model-viewer>
 
 </body>
 </html>
