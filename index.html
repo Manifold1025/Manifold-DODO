@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AR Quick Look 測試</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Quick Look Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        a {
+            font-size: 18px;
+            color: #0066cc;
+            text-decoration: none;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #dcdcdc;
+        }
+    </style>
 </head>
 <body>
-    <h1>點擊以下鏈接查看 AR 模型：</h1>
-    <a href="https://drive.google.com/uc?export=download&id=1umK_oh3Qof2RW120Rr-aG9-HNAU3wa37" rel="ar">查看 AR 模型</a>
+    <h1>Click to View in AR</h1>
+    <p>Click the button below to open the USDZ model in AR on iOS devices.</p>
+
+    <a href="https://drive.google.com/uc?export=download&id=1umK_oh3Qof2RW120Rr-aG9-HNAU3wa37" 
+       rel="noopener" 
+       target="_blank"
+       id="ar-link">
+        View in AR
+    </a>
+
+    <script>
+        document.getElementById("ar-link").addEventListener("click", function(event) {
+            var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            var usdzUrl = "https://drive.google.com/uc?export=download&id=1umK_oh3Qof2RW120Rr-aG9-HNAU3wa37";
+
+            if (isIos) {
+                event.preventDefault();
+                window.location.href = usdzUrl;
+            }
+        });
+    </script>
 </body>
 </html>
