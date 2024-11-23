@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DODOAR 測試版</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-    }
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-    a {
-      text-decoration: none;
-      background-color: #007bff;
-      color: white;
-      padding: 15px 25px;
-      font-size: 18px;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-    a:hover {
-      background-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DODO AR Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            display: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #F08623;
+            color: #f7f7f7;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #023A61;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Experience AR with Quick Look</h1>
-    <p>Click the button below to view the 3D model in AR.</p>
-    <!-- AR Quick Look Link -->
-    <a href="https://www.dropbox.com/scl/fi/uors21mggm6w490vgwgsl/DODO.usdz?rlkey=w3qr8hxez1u2wydwz7wysp6ul&st=py5zo8ab&dl=1" rel="ar">
-      View in AR
-    </a>
-  </div>
+    <!-- 放置 LOGO -->
+    <img src="manifold_logo.png" alt="DODO Logo">
+    <!-- 探索按鈕 -->
+    <button id="explore-button" onclick="openAR()">探索 DODO</button>
+
+    <script>
+        // 在3秒後顯示按鈕
+        setTimeout(() => {
+            document.getElementById('explore-button').style.display = 'block';
+        }, 3000);
+
+        // 打開 AR 頁面
+        function openAR() {
+            window.location.href = "https://www.dropbox.com/scl/fi/uors21mggm6w490vgwgsl/DODO.usdz?rlkey=w3qr8hxez1u2wydwz7wysp6ul&st=7q97fvpk&raw=1";
+        }
+    </script>
 </body>
 </html>
